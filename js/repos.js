@@ -7,10 +7,12 @@ function topicClass(topic){
 if(topic.includes("ai")) return "tag-ai"
 if(topic.includes("cloud")) return "tag-cloud"
 if(topic.includes("kubernetes")) return "tag-cloud"
+if(topic.includes("container")) return "tag-cloud"
 if(topic.includes("security")) return "tag-security"
 if(topic.includes("threat")) return "tag-security"
 if(topic.includes("detection")) return "tag-detection"
 if(topic.includes("linux")) return "tag-os"
+if(topic.includes("windows")) return "tag-os"
 if(topic.includes("kernel")) return "tag-os"
 
 return "tag-default"
@@ -55,6 +57,7 @@ Accept:"application/vnd.github.mercy-preview+json"
 
 repos
 .filter(repo => !repo.fork && !repo.name.endsWith(".github.io"))
+.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at))
 .forEach(repo => {
 
 const topics = repo.topics || []
