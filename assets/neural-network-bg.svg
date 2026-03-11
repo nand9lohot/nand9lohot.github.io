@@ -1,0 +1,98 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+
+<filter id="glow">
+  <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+  <feMerge>
+    <feMergeNode in="blur"></feMergeNode>
+    <feMergeNode in="SourceGraphic"></feMergeNode>
+  </feMerge>
+</filter>
+
+<style>
+
+.node {
+  fill:#00ffd0;
+  filter:url(#glow);
+  opacity:0.9;
+}
+
+.link {
+  stroke:#00ffd0;
+  stroke-width:1;
+  opacity:0.25;
+}
+
+.pulse {
+  fill:#00ffd0;
+  r:3;
+  opacity:0.8;
+}
+
+</style>
+
+</defs>
+
+<!-- background -->
+
+<rect width="100%" height="100%" fill="#050b10"></rect>
+
+<!-- connections -->
+
+<g class="link">
+
+<line x1="300" y1="200" x2="800" y2="300"></line>
+<line x1="800" y1="300" x2="1200" y2="200"></line>
+<line x1="1200" y1="200" x2="1600" y2="350"></line>
+
+<line x1="400" y1="700" x2="900" y2="650"></line>
+<line x1="900" y1="650" x2="1400" y2="750"></line>
+
+<line x1="800" y1="300" x2="900" y2="650"></line>
+<line x1="1200" y1="200" x2="900" y2="650"></line>
+
+</g>
+
+<!-- nodes -->
+
+<g class="node">
+
+<circle cx="300" cy="200" r="4"></circle>
+<circle cx="800" cy="300" r="4"></circle>
+<circle cx="1200" cy="200" r="4"></circle>
+<circle cx="1600" cy="350" r="4"></circle>
+
+<circle cx="400" cy="700" r="4"></circle>
+<circle cx="900" cy="650" r="4"></circle>
+<circle cx="1400" cy="750" r="4"></circle>
+
+</g>
+
+<!-- animated pulses -->
+
+<circle class="pulse">
+
+<animateMotion dur="6s" repeatCount="indefinite" path="M300 200 L800 300 L1200 200 L1600 350"></animateMotion>
+
+</circle>
+
+<circle class="pulse">
+
+<animateMotion dur="7s" repeatCount="indefinite" path="M400 700 L900 650 L1400 750"></animateMotion>
+
+</circle>
+
+<circle class="pulse">
+
+<animateMotion dur="8s" repeatCount="indefinite" path="M800 300 L900 650"></animateMotion>
+
+</circle>
+
+<circle class="pulse">
+
+<animateMotion dur="9s" repeatCount="indefinite" path="M1200 200 L900 650"></animateMotion>
+
+</circle>
+
+</svg>
