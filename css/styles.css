@@ -8,7 +8,7 @@ body {
   }
   
   .cyber-bg {
-  
+
     position:fixed;
     top:0;
     left:0;
@@ -17,12 +17,13 @@ body {
     height:100%;
     
     background:
-    url("../assets/cyber-grid.svg") center/cover no-repeat,
-    #0b0f14;
+    url("../assets/neural-network-bg.svg") center/cover no-repeat;
     
     z-index:-1;
-  
-  }
+    
+    opacity:0.65;
+    
+    }
   
   header {
   
@@ -65,22 +66,27 @@ body {
   }
   
   .repo-card {
+
+  background: rgba(15,25,35,0.7);
+  border:1px solid rgba(0,255,200,0.2);
   
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.1);
+  padding:22px;
+  border-radius:12px;
   
-  padding:20px;
-  border-radius:10px;
+  backdrop-filter: blur(8px);
   
-  transition:.3s;
+  transition:all 0.25s;
   
   }
-  
+    
   .repo-card:hover {
   
-  box-shadow:0 0 20px rgba(0,255,200,0.4);
-  transform:translateY(-5px);
+  transform:translateY(-6px);
   
+  border-color:#00ffd0;
+  
+  box-shadow:0 0 18px rgba(0,255,200,0.25);
+    
   }
   
   .repo-title {
