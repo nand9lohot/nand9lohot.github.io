@@ -1,0 +1,81 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+
+<!-- glow effect -->
+
+<filter id="glow">
+  <feGaussianBlur stdDeviation="3.5" result="coloredBlur"></feGaussianBlur>
+  <feMerge>
+    <feMergeNode in="coloredBlur"></feMergeNode>
+    <feMergeNode in="SourceGraphic"></feMergeNode>
+  </feMerge>
+</filter>
+
+<!-- grid pattern -->
+
+<pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+  <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#00ffc8" stroke-width="0.6" opacity="0.25"></path>
+</pattern>
+
+<!-- large grid -->
+
+<pattern id="gridLarge" width="240" height="240" patternUnits="userSpaceOnUse">
+  <rect width="240" height="240" fill="url(#grid)"></rect>
+  <path d="M 240 0 L 0 0 0 240" fill="none" stroke="#00ffc8" stroke-width="1.2" opacity="0.4"></path>
+</pattern>
+
+<!-- radial glow -->
+
+<radialGradient id="centerGlow">
+  <stop offset="0%" stop-color="#00ffc8" stop-opacity="0.35"></stop>
+  <stop offset="100%" stop-color="#00ffc8" stop-opacity="0"></stop>
+</radialGradient>
+
+</defs>
+
+<!-- background -->
+
+<rect width="100%" height="100%" fill="#0b0f14"></rect>
+
+<!-- grid -->
+
+<rect width="100%" height="100%" fill="url(#gridLarge)"></rect>
+
+<!-- horizon glow -->
+
+<ellipse cx="960" cy="650" rx="900" ry="200" fill="url(#centerGlow)"></ellipse>
+
+<!-- cyber nodes -->
+
+<g filter="url(#glow)" fill="#00ffc8">
+
+<circle cx="300" cy="300" r="3"></circle>
+<circle cx="600" cy="220" r="3"></circle>
+<circle cx="1000" cy="280" r="3"></circle>
+<circle cx="1400" cy="260" r="3"></circle>
+<circle cx="1650" cy="350" r="3"></circle>
+
+<circle cx="450" cy="520" r="3"></circle>
+<circle cx="820" cy="500" r="3"></circle>
+<circle cx="1200" cy="540" r="3"></circle>
+<circle cx="1500" cy="520" r="3"></circle>
+
+</g>
+
+<!-- network lines -->
+
+<g stroke="#00ffc8" stroke-width="0.6" opacity="0.35">
+
+<line x1="300" y1="300" x2="600" y2="220"></line>
+<line x1="600" y1="220" x2="1000" y2="280"></line>
+<line x1="1000" y1="280" x2="1400" y2="260"></line>
+<line x1="1400" y1="260" x2="1650" y2="350"></line>
+
+<line x1="450" y1="520" x2="820" y2="500"></line>
+<line x1="820" y1="500" x2="1200" y2="540"></line>
+<line x1="1200" y1="540" x2="1500" y2="520"></line>
+
+</g>
+
+</svg>

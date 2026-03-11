@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Infosecbytes | AI Security Research</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="cyber-bg"></div>
+
+<header>
+
+<img src="assets/infosecbytes-logo.png" class="logo">
+
+<h1>Infosecbytes</h1>
+
+<p class="tagline">
+AI Security • OS Internals • DevSecOps • Offensive Research
+</p>
+
+<input id="search" type="text" placeholder="Search projects…">
+
+</header>
+
+<section class="featured">
+
+<h2>Featured Security Research</h2>
+
+<div class="featured-grid">
+
+<a href="#">
+<div class="featured-card">
+
+<h3>AI Red Team Labs</h3>
+
+<p>
+Hands-on attacks against LLM systems including prompt injection,
+model poisoning and adversarial examples.
+</p>
+
+</div>
+</a>
+
+<a href="#">
+<div class="featured-card">
+
+<h3>Linux Hardening Toolkit</h3>
+
+<p>
+Automated CIS hardening framework for enterprise Linux systems.
+</p>
+
+</div>
+</a>
+
+</div>
+
+</section>
+
+<section class="projects">
+
+<h2>Projects</h2>
+
+<div id="repo-container" class="repo-grid"></div>
+
+</section>
+
+<section class="contributions">
+
+<h2>Open Source Contributions</h2>
+
+<div class="calendar"></div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Infosecbytes</p>
+
+</footer>
+
+<script src="js/repos.js"></script>
+<script src="js/search.js"></script>
+
+<script>
+GitHubCalendar(".calendar", "YOUR_GITHUB_USERNAME");
+</script>
+
+</body>
+
+</html>
