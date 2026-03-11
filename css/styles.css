@@ -5,49 +5,96 @@ body{
   font-family:'Inter',sans-serif;
   }
   
-  /* Background */
+  /* BACKGROUND */
   
   .cyber-bg{
-  
   position:fixed;
   top:0;
   left:0;
-  
   width:100%;
   height:100%;
-  
   background:url("../assets/neural-network-bg.svg") center/cover no-repeat;
-  
   opacity:0.85;
   z-index:-1;
-  
   }
   
   /* HEADER */
   
   header{
-  
   text-align:center;
   padding:60px 20px 20px 20px;
-  
   }
   
-  header h1{
+  /* HERO TITLE */
+  
+  .hero-title{
   
   font-family:'Orbitron',sans-serif;
-  font-weight:500;
-  margin-bottom:10px;
+  
+  font-size:48px;
+  
+  font-weight:700;
+  
+  letter-spacing:2px;
+  
+  margin-bottom:8px;
+  
+  background:linear-gradient(90deg,#00ffd0,#6ee7ff,#00ffd0);
+  
+  -webkit-background-clip:text;
+  
+  -webkit-text-fill-color:transparent;
   
   }
+  
+  /* animated scan line under name */
+  
+  .hero-scanline{
+  
+  width:240px;
+  height:2px;
+  
+  margin:8px auto 18px auto;
+  
+  background:linear-gradient(
+  90deg,
+  transparent,
+  #00ffd0,
+  #6ee7ff,
+  #00ffd0,
+  transparent
+  );
+  
+  background-size:200%;
+  
+  animation:scanline 5s linear infinite;
+  
+  }
+  
+  @keyframes scanline{
+  
+  0%{background-position:0%}
+  100%{background-position:200%}
+  
+  }
+  
+  /* tagline */
   
   .tagline{
   
-  opacity:0.7;
+  opacity:0.85;
+  
+  font-size:15px;
+  
+  letter-spacing:0.5px;
+  
+  color:#9fb3c8;
+  
   margin-bottom:20px;
   
   }
   
-  /* Expertise pills */
+  /* expertise pills */
   
   .expertise{
   
@@ -60,8 +107,6 @@ body{
   margin:18px 0 20px 0;
   
   }
-  
-  /* cyber pills */
   
   .skill-pill{
   
@@ -85,13 +130,14 @@ body{
   
   }
   
-  /* telemetry glow animation */
+  /* telemetry animation */
   
   .skill-pill::before{
   
   content:"";
   
   position:absolute;
+  
   top:0;
   left:-100%;
   
@@ -116,7 +162,7 @@ body{
   
   }
   
-  /* hover effect */
+  /* hover glow */
   
   .skill-pill:hover{
   
@@ -128,8 +174,6 @@ body{
   0 0 8px rgba(0,255,200,0.4),
   0 0 16px rgba(0,255,200,0.15);
   
-  transform:translateY(-2px);
-  
   }
   
   /* SEARCH */
@@ -137,15 +181,18 @@ body{
   #search{
   
   margin-top:10px;
+  
   padding:12px;
+  
   width:300px;
   
   border-radius:6px;
+  
   border:none;
   
   }
   
-  /* Animated cyber divider */
+  /* CYBER DIVIDER */
   
   .section-divider{
   
@@ -181,6 +228,7 @@ body{
   .projects{
   
   max-width:1200px;
+  
   margin:auto;
   
   padding:20px 40px 40px 40px;
@@ -193,7 +241,7 @@ body{
   
   }
   
-  /* Repo grid */
+  /* GRID */
   
   .repo-grid{
   
@@ -205,7 +253,7 @@ body{
   
   }
   
-  /* repo cards */
+  /* CARD */
   
   .repo-card{
   
@@ -253,11 +301,71 @@ body{
   
   }
   
-  /* repo meta */
+  /* TAGS */
   
-  .repo-meta{
+  .repo-tags{
   
   margin-top:10px;
-  opacity:0.7;
+  
+  display:flex;
+  
+  flex-wrap:wrap;
+  
+  gap:6px;
+  
+  }
+  
+  .repo-tag{
+  
+  font-size:11px;
+  
+  padding:4px 10px;
+  
+  border-radius:14px;
+  
+  text-transform:capitalize;
+  
+  }
+  
+  /* DOMAIN COLORS */
+  
+  .tag-ai{background:#5b2cff;color:#fff;}
+  .tag-cloud{background:#0088ff;color:#fff;}
+  .tag-security{background:#ff4d6d;color:#fff;}
+  .tag-detection{background:#ff8c00;color:#fff;}
+  .tag-os{background:#00c896;color:#000;}
+  .tag-default{background:#334155;color:#fff;}
+  
+  /* LANGUAGE */
+  
+  .repo-language{
+  
+  margin-top:10px;
+  
+  display:flex;
+  
+  align-items:center;
+  
+  gap:6px;
+  
+  font-size:13px;
+  
+  opacity:0.9;
+  
+  }
+  
+  .repo-language i{
+  
+  font-size:18px;
+  
+  }
+  
+  /* responsive */
+  
+  @media (max-width:768px){
+  
+  .hero-title{
+  font-size:34px;
+  }
   
   }
